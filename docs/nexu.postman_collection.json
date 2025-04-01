@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "8a6eb834-80f1-4113-b6c7-be4674ccb212",
+		"name": "Nexu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11158820"
+	},
+	"item": [
+		{
+			"name": "GetAllBrands",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/brands",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllModels",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/models",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"models"
+					],
+					"query": [
+						{
+							"key": "lower",
+							"value": "200000",
+							"disabled": true
+						},
+						{
+							"key": "greater",
+							"value": "100000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBrand",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Toyota\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/brands",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateModelByBrandID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prius\",\r\n    \"average_price\": 406400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/brands/1/models",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"brands",
+						"1",
+						"models"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateModel",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"average_price\": 300000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/models/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"models",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetModelsByBrandID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/brands/1/models",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"brands",
+						"1",
+						"models"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

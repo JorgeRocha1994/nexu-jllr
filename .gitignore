@@ -34,10 +34,6 @@ dist/
 pgdata/
 docker-compose.override.yml
 
-# Postman collections and environments
-docs/*.postman_collection.json
-docs/*.postman_environment.json
-
 # OS-specific files
 .DS_Store
 Thumbs.db
